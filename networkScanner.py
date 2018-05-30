@@ -1,13 +1,20 @@
-import nmap
+from libzmap import ZmapProcess
+import json
 import sys
-nmScan = nmap.PortScanner()
-# ipList = ['61.247.43.165','61.247.43.164','61.247.43.163']
-# for i in ipList:
-nmScan.scan('127.0.0.1', '0-1023')
-for port in nmScan['127.0.0.1']['tcp']:
-    thisDict = nmScan['127.0.0.1']['tcp'][port]
-    print 'Port ' + str(port) + ': ' + thisDict['product'] + ', v' + thisDict['version']
+from cidr_extractor import getIps
+
+testList1 = ['221.128.100.0/22']
+
+sg = getIps('SG')
+
+def scanner(ipList):
+    scan = []
+    for i in ipList:
+        print i
+        proc = ZmapProcess(targets=i, options='-B 100M', probe_module='icmp_echoscan', port='80')
+        for obj in proc.run():
+            print obj.saddr
 
 
 if __name__ == "__main__":
-    pass
+    scanner(sg)
