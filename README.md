@@ -33,9 +33,9 @@ Requirements to workflow:
 4. Save  
     a. keep past results for 3+ years
     b. maximize disk usage  
-    c. Host, Country, DNS, ..., Scanner  
+    c. Host, Country, DNS, Industry, Owner  
 5. Analyze  
-    a. ...  
+    a. Change over time + current state  
     b. per host  
     c. per CIDR  
     d. Country  
