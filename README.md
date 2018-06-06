@@ -21,7 +21,7 @@ Workflow:
 6. Report analysis
 
 Requirements to workflow:
-1. VPN -> mulled  
+1. VPN -> mullvad  
     a. no DNS leaks  
     b. long running VPN  
     c. moderate bandwidth
@@ -31,7 +31,7 @@ Requirements to workflow:
 3. Scan  
     a. maximize speed
 4. Save  
-    a. keep past results for 3+ years
+    a. keep past results for 3+ years  
     b. maximize disk usage  
     c. Host, Country, DNS, Industry, Owner  
 5. Analyze  
