@@ -1,7 +1,7 @@
 # shepherd
 Globe scanner
 
-Requirements:  
+**Requirements**:  
     - any vpn connection  
     - zmap  
     - zgrab  
@@ -9,10 +9,15 @@ Requirements:
     - pip  
     - setuptools  
 
-Description:  
+**Description**:  
 Scanning the net block of every country for open ports 80,443,22,21,3384  
 
-Workflow:  
+**Run**:  
+Tested in ubuntu 16.04.  
+Run with the sudo previlige in ubuntu, so libzmap can run zmap and return results.  
+`sudo python networkScanner.py`
+
+**Workflow**:  
 1. Connect to VPN
 2. Get CIDR list per country
 3. Scan countries for ports
@@ -20,7 +25,7 @@ Workflow:
 5. Analyze results
 6. Report analysis
 
-Requirements to workflow:
+**Requirements to workflow**:
 1. VPN -> mullvad  
     a. no DNS leaks  
     b. long running VPN  
